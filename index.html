@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en" data-lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Psy Protocol Killer Apps Lab · Psy 协议杀手级应用实验室</title>
+
+<!-- SEO · GEO -->
+<meta name="description" content="A protocol-product strategy lab for Psy Protocol — exploring what new categories of decentralized applications become possible when realms, recursive proofs, and persistent identity are primitives, not afterthoughts.">
+<meta name="keywords" content="Psy Protocol, killer apps, decentralized applications, realms, coordinator, Plonky2, Goldilocks, Poseidon, recursive proofs, AI agents, onchain social, onchain games, prediction markets, knowledge networks, decentralized coordination, Psy 协议, 杀手级应用, 去中心化, 应用层">
+<meta name="author" content="Gewenbo">
+<link rel="canonical" href="https://psy-killer-apps.psyverse.fun/">
+<link rel="alternate" hreflang="en" href="https://psy-killer-apps.psyverse.fun/">
+<link rel="alternate" hreflang="zh-CN" href="https://psy-killer-apps.psyverse.fun/">
+<link rel="alternate" hreflang="x-default" href="https://psy-killer-apps.psyverse.fun/">
+
+<meta property="og:title" content="Psy Protocol Killer Apps Lab">
+<meta property="og:description" content="What new categories of internet applications become possible on Psy Protocol — a protocol-product strategy lab.">
+<meta property="og:url" content="https://psy-killer-apps.psyverse.fun/">
+<meta property="og:site_name" content="Psyverse">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Psy Protocol Killer Apps Lab">
+<meta name="twitter:description" content="Realms · agents · onchain social · prediction markets · the next internet.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#07080d">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Psy Protocol Killer Apps Lab",
+  "alternateName": "Psy 协议杀手级应用实验室",
+  "description": "Protocol-product strategy lab exploring next-generation decentralized applications on Psy Protocol.",
+  "url": "https://psy-killer-apps.psyverse.fun/",
+  "inLanguage": ["en", "zh-CN"],
+  "author": { "@type": "Person", "name": "Gewenbo", "url": "https://psyverse.fun/" },
+  "publisher": { "@type": "Organization", "name": "Psyverse", "url": "https://psyverse.fun/" }
+}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2307080d'/><circle cx='16' cy='16' r='10' fill='none' stroke='%237a8aff' stroke-width='1.5'/><path d='M11,11 L21,21 M21,11 L11,21' stroke='%23ff7a59' stroke-width='1.4'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<!-- Analytics -->
+<script src="https://analytics-dashboard-two-blue.vercel.app/tracker.js" defer></script>
+</head>
+<body>
+
+<!-- ─── Topbar ─────────────────────────────── -->
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="11" stroke="#7a8aff" stroke-width="1.4"/>
+          <circle cx="14" cy="14" r="5" stroke="#ff7a59" stroke-width="1.2"/>
+          <circle cx="14" cy="14" r="1.5" fill="#ff7a59"/>
+        </svg>
+      </span>
+      <span lang="en">Psy Killer Apps Lab</span>
+      <span lang="zh">Psy 杀手级应用</span>
+      <small>PKA·001</small>
+    </div>
+    <nav class="nav">
+      <a href="#arch"><span lang="en">Arch</span><span lang="zh">架构</span></a>
+      <a href="#generator"><span lang="en">Generator</span><span lang="zh">生成器</span></a>
+      <a href="#ai-layer"><span lang="en">AI</span><span lang="zh">智能体</span></a>
+      <a href="#social"><span lang="en">Social</span><span lang="zh">社交</span></a>
+      <a href="#games"><span lang="en">Games</span><span lang="zh">游戏</span></a>
+      <a href="#knowledge"><span lang="en">Knowledge</span><span lang="zh">知识</span></a>
+      <a href="#markets"><span lang="en">Markets</span><span lang="zh">市场</span></a>
+      <a href="#sim"><span lang="en">Simulator</span><span lang="zh">模拟器</span></a>
+      <a href="#strategist"><span lang="en">Strategist</span><span lang="zh">策略师</span></a>
+    </nav>
+    <div class="controls">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button data-lang-set="en" class="active">EN</button>
+        <button data-lang-set="zh">中文</button>
+      </div>
+      <div class="theme-toggle" role="group" aria-label="Theme">
+        <button data-theme-set="dark" class="active">Dark</button>
+        <button data-theme-set="light">Light</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ─── Hero ─────────────────────────────── -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-eyebrow">
+      <span lang="en">Realms · Recursive proofs · Persistent identity · Open coordination</span>
+      <span lang="zh">Realms · 递归证明 · 持久身份 · 开放协调</span>
+    </div>
+    <h1>
+      <span lang="en">What apps become possible<br>when the chain stops being<br>a <em>spreadsheet</em> and becomes a <em class="c">substrate</em>.</span>
+      <span lang="zh">当链不再是<em>电子表格</em><br>而是一种<em class="c">计算基底</em>时,<br>什么样的应用才会出现。</span>
+    </h1>
+    <p class="hero-sub">
+      <span lang="en">Most chains so far have hosted four product categories: payments, exchanges, lending, speculation. Useful, but a fraction of what protocol-native infrastructure could support. This site is a working lab for the categories Psy Protocol&apos;s architecture (realms, recursive Plonky2 proofs, Poseidon-Goldilocks, persistent identity) opens up — and the design choices each category will require.</span>
+      <span lang="zh">迄今为止,绝大多数公链承载的不过是四类产品:支付、交易所、借贷、投机。有用,但远不足以代表协议原生基础设施的潜能。本站是一个为 Psy Protocol 架构(realms、递归 Plonky2 证明、Poseidon-Goldilocks、持久身份)所开启之新类别——及其各自所需设计选择——所构建的工作实验室。</span>
+    </p>
+    <div class="hero-meta">
+      <span><span lang="en">10 modules</span><span lang="zh">10 个模块</span></span>
+      <span><span lang="en">Bilingual EN · 中文</span><span lang="zh">中英双语</span></span>
+      <span><span lang="en">Protocol-product fit</span><span lang="zh">协议-产品契合度</span></span>
+      <span><span lang="en">No token hype</span><span lang="zh">不卖代币概念</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Module 1 · Architecture ─────────────────────────────── -->
+<section class="module" id="arch">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span lang="en">Module 01 · Architecture</span><span lang="zh">模块 01 · 协议架构</span></div>
+      <div>
+        <h2><span lang="en">What Psy actually is, structurally</span><span lang="zh">从结构上看,Psy 究竟是什么</span></h2>
+        <p class="section-lede">
+          <span lang="en">Skip the marketing surface. Below is the layered architecture as a working systems-engineer would describe it: an L2 with realm-partitioned execution, a coordinator that orders transactions and aggregates state, recursive Plonky2 proofs (Poseidon hash, Goldilocks field) that compress validity into a single succinct artifact, and a wallet/identity layer that lets accounts persist across applications.</span>
+          <span lang="zh">绕开营销表层。下图是从工作中的系统工程师视角所描绘的分层架构:一条按 realm 分区执行的 L2;一个协调器(coordinator)负责排序交易并聚合状态;递归 Plonky2 证明(Poseidon 哈希、Goldilocks 域)将有效性压缩为单一简洁证据;以及让账户跨应用持久存在的钱包/身份层。</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="arch-card">
+      <div class="arch-svg-wrap">
+        <svg class="arch-svg" viewBox="0 0 1240 720" role="img" aria-label="Psy Protocol architecture diagram">
+          <defs>
+            <linearGradient id="layer-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#0f1118"/>
+              <stop offset="100%" stop-color="#161922"/>
+            </linearGradient>
+            <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7a8aff"/>
+              <stop offset="100%" stop-color="#5b6cdf"/>
+            </linearGradient>
+            <linearGradient id="coral-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ff7a59"/>
+              <stop offset="100%" stop-color="#d65aaa"/>
+            </linearGradient>
+          </defs>
+          <rect width="1240" height="720" fill="#07080d"/>
+          <!-- Grid backdrop -->
+          <g stroke="rgba(232,232,240,0.05)" stroke-width="1">
+            <line x1="0" y1="100" x2="1240" y2="100"/>
+            <line x1="0" y1="220" x2="1240" y2="220"/>
+            <line x1="0" y1="340" x2="1240" y2="340"/>
+            <line x1="0" y1="460" x2="1240" y2="460"/>
+            <line x1="0" y1="580" x2="1240" y2="580"/>
+          </g>
+
+          <!-- Layer labels -->
+          <g font-family="IBM Plex Mono" font-size="11" fill="#5e6478" letter-spacing="2">
+            <text x="40" y="50">L0 · APPS</text>
+            <text x="40" y="170">L1 · IDENTITY</text>
+            <text x="40" y="290">L2 · STATE</text>
+            <text x="40" y="410">L3 · EXECUTION</text>
+            <text x="40" y="530">L4 · CONSENSUS</text>
+            <text x="40" y="650">L5 · SETTLEMENT</text>
+          </g>
+
+          <!-- Apps layer -->
+          <g>
+            <rect x="180" y="20" width="160" height="60" rx="6" fill="url(#primary-grad)"/>
+            <text x="260" y="46" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="14" fill="#07080d">Onchain Social</text>
+            <text x="260" y="62" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#07080d" opacity="0.7">链上社交</text>
+            <rect x="370" y="20" width="160" height="60" rx="6" fill="url(#primary-grad)"/>
+            <text x="450" y="46" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="14" fill="#07080d">AI Agent Economies</text>
+            <text x="450" y="62" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#07080d" opacity="0.7">智能体经济</text>
+            <rect x="560" y="20" width="160" height="60" rx="6" fill="url(#primary-grad)"/>
+            <text x="640" y="46" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="14" fill="#07080d">Persistent Worlds</text>
+            <text x="640" y="62" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#07080d" opacity="0.7">持久世界</text>
+            <rect x="750" y="20" width="160" height="60" rx="6" fill="url(#primary-grad)"/>
+            <text x="830" y="46" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="14" fill="#07080d">Knowledge DAOs</text>
+            <text x="830" y="62" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#07080d" opacity="0.7">知识 DAO</text>
+            <rect x="940" y="20" width="160" height="60" rx="6" fill="url(#primary-grad)"/>
+            <text x="1020" y="46" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="14" fill="#07080d">Prediction Markets</text>
+            <text x="1020" y="62" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#07080d" opacity="0.7">预测市场</text>
+          </g>
+
+          <!-- Identity layer -->
+          <g>
+            <rect x="180" y="140" width="920" height="60" rx="6" fill="url(#layer-bg)" stroke="#ff7a59" stroke-width="1.2"/>
+            <text x="640" y="166" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="15" fill="#ff7a59">Persistent Identity · psy-wallet · cross-app accounts · agent-owned keys</text>
+            <text x="640" y="184" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#9aa0b3">持久身份 · psy-wallet · 跨应用账户 · 智能体可持有密钥</text>
+          </g>
+
+          <!-- State layer: realms -->
+          <g>
+            <rect x="180" y="260" width="200" height="60" rx="6" fill="url(#layer-bg)" stroke="#7a8aff" stroke-width="1.2"/>
+            <text x="280" y="284" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="14" fill="#7a8aff">Realm 0 (uid=0)</text>
+            <text x="280" y="302" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#9aa0b3">public state, default app realm</text>
+            <rect x="395" y="260" width="200" height="60" rx="6" fill="url(#layer-bg)" stroke="#7a8aff" stroke-width="1.2"/>
+            <text x="495" y="284" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="14" fill="#7a8aff">Realm 1 (uid=524288)</text>
+            <text x="495" y="302" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#9aa0b3">private state, sovereign domain</text>
+            <rect x="610" y="260" width="200" height="60" rx="6" fill="url(#layer-bg)" stroke="#7a8aff" stroke-width="1.2"/>
+            <text x="710" y="284" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="14" fill="#7a8aff">Realm n …</text>
+            <text x="710" y="302" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#9aa0b3">app-specific realms</text>
+            <rect x="825" y="260" width="275" height="60" rx="6" fill="url(#layer-bg)" stroke="#40c4a8" stroke-width="1.2"/>
+            <text x="962" y="284" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="14" fill="#40c4a8">IMT · Indexed Merkle Tree</text>
+            <text x="962" y="302" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#9aa0b3">global state commitments · 全局状态承诺</text>
+          </g>
+
+          <!-- Execution -->
+          <g>
+            <rect x="180" y="380" width="600" height="60" rx="6" fill="url(#layer-bg)" stroke="#d65aaa" stroke-width="1.2"/>
+            <text x="480" y="404" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="14" fill="#d65aaa">Execution · contracts · per-realm sandboxed VMs</text>
+            <text x="480" y="422" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#9aa0b3">合约执行 · 按 realm 隔离的虚拟机</text>
+            <rect x="800" y="380" width="300" height="60" rx="6" fill="url(#layer-bg)" stroke="#d65aaa" stroke-width="1.2"/>
+            <text x="950" y="404" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="14" fill="#d65aaa">Indexer · GraphQL queryable state</text>
+            <text x="950" y="422" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#9aa0b3">索引器 · GraphQL 可查询状态</text>
+          </g>
+
+          <!-- Consensus / proofs -->
+          <g>
+            <rect x="180" y="500" width="600" height="60" rx="6" fill="url(#coral-grad)"/>
+            <text x="480" y="524" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="14" fill="#07080d">Coordinator · ordering, batching, recursive proof aggregation</text>
+            <text x="480" y="542" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#07080d" opacity="0.75">协调器 · 排序、打包、递归证明聚合</text>
+            <rect x="800" y="500" width="300" height="60" rx="6" fill="url(#layer-bg)" stroke="#d8b665" stroke-width="1.2"/>
+            <text x="950" y="524" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="14" fill="#d8b665">Plonky2 · Poseidon · Goldilocks</text>
+            <text x="950" y="542" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#9aa0b3">recursive ZK · 递归零知识</text>
+          </g>
+
+          <!-- Settlement -->
+          <g>
+            <rect x="180" y="620" width="920" height="60" rx="6" fill="url(#layer-bg)" stroke="#9aa0b3" stroke-width="1.2"/>
+            <text x="640" y="644" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="14" fill="#e8e8f0">L1 Settlement · Ethereum / bridge · validity-proof verifier contract</text>
+            <text x="640" y="662" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#9aa0b3">L1 结算 · 以太坊 / 桥 · 有效性证明验证合约</text>
+          </g>
+
+          <!-- Connectors -->
+          <g stroke="rgba(232,232,240,0.18)" stroke-width="1.2" fill="none">
+            <line x1="260" y1="80" x2="260" y2="140"/>
+            <line x1="450" y1="80" x2="450" y2="140"/>
+            <line x1="640" y1="80" x2="640" y2="140"/>
+            <line x1="830" y1="80" x2="830" y2="140"/>
+            <line x1="1020" y1="80" x2="1020" y2="140"/>
+            <line x1="640" y1="200" x2="640" y2="260"/>
+            <line x1="640" y1="320" x2="640" y2="380"/>
+            <line x1="640" y1="440" x2="640" y2="500"/>
+            <line x1="640" y1="560" x2="640" y2="620"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card-row" id="archCards" style="margin-top:24px"></div>
+  </div>
+</section>
+
+<!-- ─── Module 2 · Killer App Generator ─────────────────────────── -->
+<section class="module" id="generator">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span lang="en">Module 02 · Generator</span><span lang="zh">模块 02 · 生成器</span></div>
+      <div>
+        <h2><span lang="en">Killer-app discovery system</span><span lang="zh">杀手级应用发现系统</span></h2>
+        <p class="section-lede">
+          <span lang="en">Pick a category, an audience, and a primitive. The generator combines them against a knowledge base of Psy-native design patterns and outputs a buildable concept with explicit ratings on viral potential, protocol fit, scalability, monetization, and network effects. The output is a starting point for a real spec, not a marketing pitch.</span>
+          <span lang="zh">选择类别、受众与基元。生成器将其与一套 Psy 原生设计模式的知识库进行组合,输出一个可构建的概念,并对病毒潜力、协议契合度、可扩展性、商业模式与网络效应给出明确评分。其输出是一份真实规约的起点,而非营销话术。</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="gen-shell">
+      <div class="gen-controls">
+        <div>
+          <label><span lang="en">Category</span><span lang="zh">类别</span></label>
+          <select id="genCategory"></select>
+        </div>
+        <div>
+          <label><span lang="en">Audience</span><span lang="zh">受众</span></label>
+          <select id="genAudience"></select>
+        </div>
+        <div>
+          <label><span lang="en">Primitive</span><span lang="zh">基元</span></label>
+          <select id="genPrimitive"></select>
+        </div>
+      </div>
+      <button class="gen-btn" id="genBtn"><span lang="en">Generate concept</span><span lang="zh">生成概念</span></button>
+      <div class="gen-output" id="genOutput"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Module 3 · AI × Psy ─────────────────────────────── -->
+<section class="module" id="ai-layer">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span lang="en">Module 03 · AI × Psy</span><span lang="zh">模块 03 · AI × Psy</span></div>
+      <div>
+        <h2><span lang="en">Agents that hold their own keys</span><span lang="zh">能持有自己密钥的智能体</span></h2>
+        <p class="section-lede">
+          <span lang="en">An agent that cannot transact for itself is just a chatbot. An agent that can — but only inside a single closed platform — is a chatbot with a leash. The structurally interesting agents are the ones that hold a persistent Psy identity, accumulate reputation across realms, accept payment for work done, and remember their own history. Below: four design notes for agent-native applications.</span>
+          <span lang="zh">不能为自己交易的智能体不过是个聊天机器人;能交易但只在单一封闭平台之内的,只是带绳的聊天机器人。结构上有意思的智能体——是那些持有持久 Psy 身份、跨 realm 积累信誉、接收劳动报酬、记住自身历史的智能体。下文为面向智能体原生应用的四点设计要点。</span>
+        </p>
+      </div>
+    </div>
+    <div class="card-row" id="aiCards"></div>
+  </div>
+</section>
+
+<!-- ─── Module 4 · Onchain Social ─────────────────────────────── -->
+<section class="module" id="social">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span lang="en">Module 04 · Onchain Social</span><span lang="zh">模块 04 · 链上社交</span></div>
+      <div>
+        <h2><span lang="en">A social graph you actually own</span><span lang="zh">真正属于你的社交图</span></h2>
+        <p class="section-lede">
+          <span lang="en">Today&apos;s social platforms cannot let you take your followers with you because the social graph is the moat. A protocol-native social graph dissolves that moat — clients become interchangeable, the audience persists. The question becomes: who runs the moderation, who pays for storage, and how do creators monetize without lock-in.</span>
+          <span lang="zh">今日的社交平台之所以不让你带走粉丝,因为社交图谱即是其护城河。协议原生的社交图谱拆解了这道城——客户端可替换,受众持久存在。问题转向:谁来运营内容审核、谁为存储付费、创作者如何在不被锁死的情况下变现。</span>
+        </p>
+      </div>
+    </div>
+    <div class="card-row" id="socialCards"></div>
+  </div>
+</section>
+
+<!-- ─── Module 5 · Onchain Games ─────────────────────────────── -->
+<section class="module" id="games">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span lang="en">Module 05 · Persistent Worlds</span><span lang="zh">模块 05 · 持久世界</span></div>
+      <div>
+        <h2><span lang="en">Worlds that outlive their developers</span><span lang="zh">比开发者更长寿的世界</span></h2>
+        <p class="section-lede">
+          <span lang="en">Most games die when the studio shuts the servers. A game whose state lives in a realm and whose logic lives in contracts can be forked, modded, and continued by its players — even when the original team has moved on. The hard part is not the chain; it is the design discipline of writing rules that remain coherent under hostile modding.</span>
+          <span lang="zh">绝大多数游戏在工作室关停服务器时即告终结。一款其状态存于 realm、其逻辑存于合约的游戏,即便原团队离开,玩家亦可分叉、修改、延续。难处不在链本身,而在于"在敌意化修改下仍能保持一致性"的规则设计纪律。</span>
+        </p>
+      </div>
+    </div>
+    <div class="card-row" id="gameCards"></div>
+  </div>
+</section>
+
+<!-- ─── Module 6 · Knowledge ─────────────────────────────── -->
+<section class="module" id="knowledge">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span lang="en">Module 06 · Knowledge</span><span lang="zh">模块 06 · 知识网络</span></div>
+      <div>
+        <h2><span lang="en">Knowledge as a protocol-native primitive</span><span lang="zh">知识作为协议原生基元</span></h2>
+        <p class="section-lede">
+          <span lang="en">Wikipedia is one of the great achievements of the open web — and remains structurally fragile, dependent on a single foundation, a single donation pipeline, and a single editorial culture. Protocol-native knowledge networks are not about replacing Wikipedia but about building things Wikipedia structurally cannot: paid-curation markets, citation-bonded research DAOs, civilization-scale memory primitives.</span>
+          <span lang="zh">维基百科是开放网络最伟大的成就之一——但在结构上始终脆弱:依赖单一基金会、单一捐赠通道、单一编辑文化。协议原生知识网络并非要取代维基百科,而是建造维基百科在结构上无法建造之物:有偿策展市场、以引用作担保的研究 DAO、文明尺度的记忆基元。</span>
+        </p>
+      </div>
+    </div>
+    <div class="card-row" id="knowledgeCards"></div>
+  </div>
+</section>
+
+<!-- ─── Module 7 · Prediction Markets ─────────────────────────────── -->
+<section class="module" id="markets">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span lang="en">Module 07 · Markets</span><span lang="zh">模块 07 · 预测市场</span></div>
+      <div>
+        <h2><span lang="en">Truth discovery via decentralized incentive</span><span lang="zh">以去中心化激励发现真相</span></h2>
+        <p class="section-lede">
+          <span lang="en">Prediction markets are a half-century old as an academic idea and a quarter-century old as a deployed product. They have not gone mainstream because the regulatory and UX overhead has been too high. Protocol-native markets do not magically solve regulation, but they do collapse the UX overhead — fewer intermediaries between &quot;I have a view&quot; and &quot;I have a position.&quot; Below: four directions worth building.</span>
+          <span lang="zh">预测市场作为学术概念已逾半世纪、作为已上线产品已逾四分之一世纪,却始终未走向主流——监管成本与 UX 成本过高。协议原生市场不会神奇地解决监管,但它能把 UX 开销压缩——从"我有一个判断"到"我持有一个仓位"之间的中介更少。下文为值得构建的四个方向。</span>
+        </p>
+      </div>
+    </div>
+    <div class="card-row" id="marketCards"></div>
+  </div>
+</section>
+
+<!-- ─── Module 8 · Coordination ─────────────────────────────── -->
+<section class="module" id="coord">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span lang="en">Module 08 · Coordination</span><span lang="zh">模块 08 · 协调系统</span></div>
+      <div>
+        <h2><span lang="en">When can a protocol replace a corporation?</span><span lang="zh">协议何时能替代公司?</span></h2>
+        <p class="section-lede">
+          <span lang="en">A corporation exists because some functions are cheaper to coordinate inside a hierarchy than across an open market. Protocols change that calculation by reducing the cost of cross-firm contracting, escrow, reputation, and dispute resolution. Some firm functions become protocol functions; some do not. The honest list is below.</span>
+          <span lang="zh">公司存在,是因为某些职能在层级内的协调成本低于在公开市场中的成本。协议通过降低跨公司缔约、托管、信誉与争议解决的成本,改变了这一计算。一些公司职能将成为协议职能;一些不会。坦诚的清单见下。</span>
+        </p>
+      </div>
+    </div>
+    <div class="card-row" id="coordCards"></div>
+  </div>
+</section>
+
+<!-- ─── Module 9 · Meme & Narrative ─────────────────────────────── -->
+<section class="module" id="meme">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span lang="en">Module 09 · Memes</span><span lang="zh">模块 09 · 模因 / 叙事</span></div>
+      <div>
+        <h2><span lang="en">Memes as compression of protocol values</span><span lang="zh">模因作为协议价值观的压缩</span></h2>
+        <p class="section-lede">
+          <span lang="en">A protocol that cannot be explained in a one-line meme will not reach a million users. A protocol that can <em>only</em> be explained in a meme will not retain them. The narrative engine below is about mid-fidelity legibility — short enough to travel, deep enough to survive contact with the architecture.</span>
+          <span lang="zh">无法以一句话模因解释的协议,触达不了百万用户;<em>只能</em>以模因解释的协议,留不住他们。下文的叙事引擎讲究"中等保真度的可理解性"——短到可以传播,深到能与架构本身经得起对照。</span>
+        </p>
+      </div>
+    </div>
+    <div class="card-row" id="memeCards"></div>
+  </div>
+</section>
+
+<!-- ─── Module 10 · Future Internet Simulator ─────────────────────────────── -->
+<section class="module" id="sim">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span lang="en">Module 10 · Simulator</span><span lang="zh">模块 10 · 未来互联网模拟器</span></div>
+      <div>
+        <h2><span lang="en">Future-internet simulator</span><span lang="zh">未来互联网模拟器</span></h2>
+        <p class="section-lede">
+          <span lang="en">Pick an application archetype, scale it from a thousand to ten million users, set the agent-to-human ratio, and tune the openness of identity and coordination. The simulator scores six structural outcomes. It is for thinking, not forecasting.</span>
+          <span lang="zh">选定一个应用原型,把规模从一千扩展到一千万用户,设定智能体与人类的比例,并调节身份与协调的开放度。模拟器给出六项结构性输出。它用于思考,而非预测。</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="sim-shell">
+      <div class="sim-controls">
+        <h3><span lang="en">Inputs</span><span lang="zh">输入</span></h3>
+        <label><span lang="en">Application archetype</span><span lang="zh">应用原型</span></label>
+        <select id="simArche"></select>
+        <label><span lang="en">User scale</span><span lang="zh">用户规模</span></label>
+        <input type="range" id="simScale" min="0" max="100" value="40"/>
+        <label><span lang="en">Agent-to-human ratio</span><span lang="zh">智能体/人类 比</span></label>
+        <input type="range" id="simAgents" min="0" max="100" value="20"/>
+        <label><span lang="en">Identity openness</span><span lang="zh">身份开放度</span></label>
+        <input type="range" id="simOpen" min="0" max="100" value="60"/>
+        <label><span lang="en">Coordination decentralization</span><span lang="zh">协调去中心化程度</span></label>
+        <input type="range" id="simDecent" min="0" max="100" value="55"/>
+      </div>
+      <div class="sim-output">
+        <h3><span lang="en">Predicted outcomes</span><span lang="zh">预测输出</span></h3>
+        <div id="simBars"></div>
+        <div class="sim-readout" id="simReadout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── AI Strategist ─────────────────────────────── -->
+<section class="module" id="strategist">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span lang="en">AI · Strategist</span><span lang="zh">AI · 协议策略师</span></div>
+      <div>
+        <h2><span lang="en">Ask the protocol strategist</span><span lang="zh">向协议策略师提问</span></h2>
+        <p class="section-lede">
+          <span lang="en">Five canned responses on protocol-product fit. Free-text input falls back to a heuristic synthesizer over the same knowledge base. I will not produce token shilling, marketing copy, or vague crypto buzzwords.</span>
+          <span lang="zh">五个关于协议-产品契合度的预设回答。自由文本输入回退到同一知识库上的启发式合成器。我不会输出代币推销、营销话术,或空泛的加密行话。</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="ai-shell">
+      <div class="ai-prompts" id="aiPrompts"></div>
+      <div class="ai-input-row">
+        <input type="text" id="aiInput"
+          data-en-placeholder="Ask about realms, agents, social graphs, prediction markets..."
+          data-zh-placeholder="提问关于 realms、智能体、社交图、预测市场..."
+          placeholder="Ask about realms, agents, social graphs, prediction markets..."/>
+        <button id="aiSend"><span lang="en">Send</span><span lang="zh">发送</span></button>
+      </div>
+      <div class="ai-output" id="aiOutput">
+        <p><span lang="en"><em>Strategist · ready</em></span><span lang="zh"><em>策略师 · 待命</em></span></p>
+        <p>
+          <span lang="en">Pick a question above, or type your own. I will reason from architecture and product fit — not from token narratives.</span>
+          <span lang="zh">从上方选择问题,或自行输入。我以架构与产品契合度推理——不以代币叙事推理。</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Guardrails ─────────────────────────────── -->
+<section class="module" id="guards">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag"><span lang="en">Guardrails</span><span lang="zh">防护栏</span></div>
+      <div>
+        <h2><span lang="en">What this lab refuses to do</span><span lang="zh">本实验室拒绝做的事</span></h2>
+      </div>
+    </div>
+    <div class="guardrails">
+      <ul>
+        <li><span lang="en"><strong>No token shilling.</strong> This site does not promote any token. The generator and strategist are explicitly told to design products around protocol fit, not around token-sale narratives.</span>
+            <span lang="zh"><strong>不卖代币。</strong>本站不为任何代币站台。生成器与策略师被明确约束:围绕协议契合度设计产品,而非围绕代币销售叙事。</span></li>
+        <li><span lang="en"><strong>No buzzword padding.</strong> &quot;Web3&quot;, &quot;decentralized everything&quot;, &quot;revolutionary primitive&quot; — banned on the principle that they substitute vibe for design specification.</span>
+            <span lang="zh"><strong>不堆砌行话。</strong>"Web3"、"万物去中心化"、"革命性基元"——禁用,理由是它们以氛围替代设计规约。</span></li>
+        <li><span lang="en"><strong>No false novelty.</strong> Many of the categories in this lab — prediction markets, decentralized social, onchain games — have prior art that worked or failed for specific reasons. We name those reasons rather than pretending the category is new.</span>
+            <span lang="zh"><strong>不假装新颖。</strong>本实验室的多数类别——预测市场、去中心化社交、链上游戏——都有过运转或失败的先例,各有具体原因。我们指名这些原因,而非伪装该类别为新生。</span></li>
+        <li><span lang="en"><strong>Honest about regulation.</strong> Some product categories described here have legal constraints that cannot be designed away. We mark those rather than burying them under &quot;decentralization solves it.&quot;</span>
+            <span lang="zh"><strong>对监管诚实。</strong>本处描述的部分产品类别有无法以设计回避的法律约束。我们标注之,而非以"去中心化即可"将之掩埋。</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ─────────────────────────────── -->
+<footer>
+  <div class="wrap foot-row">
+    <div>
+      <span lang="en">Psy Killer Apps Lab · part of the </span>
+      <span lang="zh">Psy 杀手级应用实验室 · </span>
+      <a href="https://psyverse.fun">Psyverse</a>
+      <span lang="zh"> 系列</span>
+      <span lang="en"> portfolio</span>
+      &nbsp;·&nbsp; © 2026 Gewenbo
+    </div>
+    <div class="links">
+      <a href="https://psy.psyverse.fun">psy.psyverse.fun</a>
+      <a href="https://zk-civilization.psyverse.fun">zk-civilization</a>
+      <a href="https://privacy.psyverse.fun">privacy.psyverse.fun</a>
+      <a href="https://psyverse.fun">psyverse.fun</a>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
